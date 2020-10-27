@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="../css/estilo.css" />
+
+    <title>Bases de datos</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="titulo">
+            <h1>
+                <a href="../index.html">Gestión de Pacientes</a>
+            </h1>
+        </div>
+    </header>
+    <!-- Formulario actulizar info paciente -->
+    <div class="container">
+        <form id="editar" method="put">
+            <h3>Actualizar información paciente</h3>
+            <fieldset>
+                <input placeholder="Cédula paciente" name="identificacion" type="text" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Nombre Paciente" name="nombre" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Apellido Paciente" name="apellido" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Correo Paciente" name="email" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="editar-submit" data-submit="...Sending">Actulizar</button>
+            </fieldset>
+            <h4 class="mensajeRespuesta"></h4>
+        </form>
+    </div>
+
+
+    <script src="../controllers/editar.js"></script>
+</body>
+
+</html>

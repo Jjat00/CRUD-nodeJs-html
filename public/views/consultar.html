@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="../css/estilo.css" />
+
+    <title>Bases de datos</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="titulo">
+            <h1>
+                <a href="../index.html">Gestión de Pacientes</a>
+            </h1>
+        </div>
+    </header>
+    <!-- Formulario de consulta -->
+    <div class="container">
+        <form id="consulta" method="get">
+            <h3>Consultar paciente</h3>
+            <fieldset>
+                <input placeholder="Id Paciente" name="identificacion" type="text" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="consulta-submit" data-submit="...Consultando">Consultar</button>
+            </fieldset>
+        </form>
+        <div>
+            <h2>Información Paciente:</h2>
+            <h4 class="mensajeRespuesta"></h4>
+            <h4 class="nombre"></h4>
+            <h4 class="apellido"></h4>
+            <h4 class="email"></h4>
+        </div>
+    </div>
+
+    <script src="../controllers/consultar.js"></script>
+</body>
+
+</html>

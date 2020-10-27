@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Costum style -->
+    <link rel="stylesheet" href="../css/estilo.css" />
+
+    <title>Registro pacientes</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="titulo">
+            <h1>
+                <a href="../index.html">Gestión de Pacientes</a>
+            </h1>
+        </div>
+    </header>
+    <!-- Formulario de registro -->
+    <div class="container">
+        <form id="registro" method="post">
+            <h3>Registrar paciente</h3>
+            <fieldset>
+                <input placeholder="Cédula paciete" name="identificacion" type="text" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Nombre paciente" name="nombre" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Apellido paciente" name="apellido" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Correo paciente" name="email" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="registro-submit" data-submit="...Sending">Registrar</button>
+            </fieldset>
+            <h4 class="mensajeRespuesta"></h4>
+        </form>
+    </div>
+    <script src="../controllers/registrar.js"></script>
+</body>
+
+</html>

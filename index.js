@@ -1,17 +1,26 @@
+const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
+
 const app = express();
 
-//app.use(express.bodyParser());
+app.use(cors({
+    origin: '*',
+    optionsSuccessStatus: 200,
+    methods: "GET, PUT, DELETE, POST"
+}))
 
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const mountRoutes = require('./routers');
 
-mountRoutes(app);
+app.use(express.static(path.join(__dirname, 'public')));
+
+const dbRoutes = require('./routers');
+
+dbRoutes(app);
+
 
 const PORT = process.env.PORT || 3000;
 
